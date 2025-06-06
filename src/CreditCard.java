@@ -5,24 +5,24 @@ public class CreditCard {
 
     // constructor to create a credit card
     public CreditCard(Person newCardHolder, Money limit) {
-        this.owner = newCardHolder;         // copy of person
-        this.creditLimit = new Money(limit);            // copy of money for limit
-        this.balance = new Money(0);                    // start with zero balance
+        this.owner = newCardHolder;
+        this.creditLimit = new Money(limit);
+        this.balance = new Money(0);
     }
 
     // returns a copy of the current balance
     public Money getBalance() {
-        return new Money(balance);                      // return defensive copy
+        return new Money(balance);
     }
 
     // returns a copy of the credit limit
     public Money getCreditLimit() {
-        return new Money(creditLimit);                  // return defensive copy
+        return new Money(creditLimit);
     }
 
     // returns the owner's personal information
     public String getPersonals() {
-        return owner.toString();                        // call person's toString
+        return owner.toString();
     }
 
     // adds a charge to the balance if it doesn't exceed the credit limit
